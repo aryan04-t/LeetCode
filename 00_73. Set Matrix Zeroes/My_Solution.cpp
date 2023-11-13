@@ -39,4 +39,5 @@ public:
 };
 
 // TC: O(n*m)                                              // Where n = number of rows and m = number of columns 
-// SC: Omega(1)   Theta(1)   O(2*(m*n)) means O(m*n) 
+
+// SC: Omega(1)    Theta(min(number of zero elements, maxRow * maxCol))    O(2*(m*n)) means O(m*n) 
