@@ -14,7 +14,7 @@ public:
 
         for(int row=0; row < maxRows; row++){
             for(int col=0; col < maxCols; col++){
-                if(matrix[row][col] != 0){
+                if(matrix[row][col] == 0){
                     for(int i=0; i < maxCols; i++){
                         matrix[row][i] = 0;
                     }
