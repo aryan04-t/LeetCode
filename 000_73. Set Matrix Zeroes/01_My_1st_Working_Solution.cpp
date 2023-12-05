@@ -1,7 +1,7 @@
 // LeetCode (Set Matrix Zeroes): 
 // https://leetcode.com/problems/set-matrix-zeroes/ 
 
-#include<iostream>
+
 #include<vector>
 using namespace std;
 
@@ -41,6 +41,17 @@ public:
 
 };
 
-// TC: O(n*m)                                              // Where n = number of rows and m = number of columns 
 
-// SC: Omega(1)    Theta(min(number of zero elements, maxRow * maxCol))    O(2*(m*n)) means O(m*n) 
+// TC: O(n*m) + O(((n*m)-1)*(n+m)) = O(n^2 + 2nm + m^2 - n - m) = O(max(n^2,m^2)) 
+// Where n = number of rows and m = number of columns 
+
+
+/*
+
+// SC: 
+
+Best Case:     Omega(1) 
+Average Case:  Theta(min(2*number of zero elements, 2*(n*m))) = Theta(min(number of zero elements, n*m)) 
+Worst Case:    O(2*(n*m)) = O(n*m) 
+
+*/
