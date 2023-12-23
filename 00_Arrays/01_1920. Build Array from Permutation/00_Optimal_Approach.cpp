@@ -20,3 +20,6 @@ public:
 
 // T.C. = O(n) 
 // S.C. = O(n) 
+
+
+// Here, n = number of elements present inside the input vector named "nums" 
