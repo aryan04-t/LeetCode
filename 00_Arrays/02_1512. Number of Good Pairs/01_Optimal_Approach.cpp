@@ -1,3 +1,7 @@
+// LeetCode (Number of Good Pairs): 
+// https://leetcode.com/problems/number-of-good-pairs/ 
+
+
 #include<vector> 
 #include<unordered_map> 
 using namespace std;
