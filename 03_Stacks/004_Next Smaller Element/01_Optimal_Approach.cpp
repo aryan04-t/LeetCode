@@ -4,7 +4,7 @@
 
 // Optimal Approach: 
 
-#include<iostream> 
+
 #include<vector> 
 #include<stack> 
 using namespace std; 
@@ -32,8 +32,10 @@ vector<int> nextSmallerElement(vector<int> &arr, int n)
 }
 
 
-// T.C.: O(n) * O(1) = O(n) -> (t.c. of for loop for traversing the whole input vector once) * (average t.c. of while loop even in wrost case is constant) 
+// T.C. = O(n) * O(1) = O(n) 
+// -> (t.c. of for loop for traversing the whole input vector once) * (average t.c. of while loop even in wrost case is constant) 
 
-// S.C.: O(n) + O(n) = O(2n) = O(n) -> (worst case s.c. of vector named "result") + (worst case s.c. of stack named "st") 
+// S.C. = O(n) + O(n) = O(2n) = O(n) 
+// -> (worst case s.c. of vector named "result") + (worst case s.c. of stack named "st") 
 
 // Here, n = number of elements which are present in input vector named "arr" 

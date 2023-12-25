@@ -45,9 +45,10 @@ public:
 };
 
 
-// T.C.: O(n) + O(n^2) = O(n^2) 
+// T.C. = O(n) + O(n^2) = O(n^2) 
 // -> (traversing whole vector to convert time into minutes, and storing it in other vector) + (t.c. of nested loops to compare every pair of time points and calculate the time difference between them for finding the minimum time difference) 
 
-// S.C.: O(n) -> Creating one more vector proportional to the size of input vector 
+// S.C. = O(n) 
+// -> Creating one more vector proportional to the size of input vector 
 
 // Here, n = size of input vector named "timePoints" 

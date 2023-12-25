@@ -4,7 +4,7 @@
 
 // Naive Approach: 
 
-#include<iostream>
+
 #include<vector>
 using namespace std;
 
@@ -27,7 +27,7 @@ vector<int> nextSmallerElement(vector<int> &arr, int n)
 }
 
 
-// T.C.: O(n^2) -> (due to nested for loops) 
-// S.C.: O(n) 
+// T.C. = O(n^2) -> (due to nested for loops) 
+// S.C. = O(n) 
 
 // Here, n = number of elements which are present in input vector named "arr" 

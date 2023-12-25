@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/ 
 
 
-#include<iostream> 
 #include<string> 
 using namespace std; 
 
@@ -33,7 +32,10 @@ public:
 };
 
 
-// T.C.: O(n) -> While loop is traversing the whole input string named "s" 
-// S.C.: O(n) -> If all the adjacent elements are non-duplicates, then all of them will get pushed to "ans" stack 
+// T.C. = O(n) 
+// -> While loop is traversing the whole input string named "s" 
+
+// S.C. = O(n) 
+// -> If all the adjacent elements are non-duplicates, then all of them will get pushed to "ans" stack 
 
 // Here, n = length of input string named "s" 

@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/minimum-time-difference/ 
 
 
-#include<iostream>
 #include<vector>
 #include<string>
 #include<algorithm>
@@ -46,16 +45,16 @@ public:
 };
 
 
-// T.C.: O(m * n * log(n)) + O(n) = O(m * n * log(n)) 
+// T.C. = O(m * n * log(n)) + O(n) = O(m * n * log(n)) 
 // -> (t.c. of in-built sort algorithm for sorting string vector) + (traversing the whole input vector once to find the minimum time difference) 
 
 // --> Time complexity of STL's sort function is O(n * log(n)), where n = the number of elements to be sorted. 
 // --> But when this in-built sort algorithm is called to sort a string array, then the time complexity becomes O(m * n * log(n)) because of the lexicographical comparisons that has to be made, here m = the average length of the strings. 
 
 
-// S.C.: O(1) -> No extra space is occupied by the above algorithm proportional to the input array size. 
+// S.C. = O(1) -> No extra space is occupied by the above algorithm proportional to the input array size. 
 
-// Here, n = size of input vector named "timePoints", and m = the average length of the strings. 
+// Here, n = size of input vector named "timePoints", and m = the average length of strings whcih are present inside the vector. 
 
 
 

@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/ 
 
 
-#include<iostream> 
 #include<string> 
 using namespace std; 
 
@@ -24,7 +23,10 @@ public:
 };
 
 
-// T.C.: O(n) + O(i) = O(n) -> (traversing the whole string) + (t.c. of func. substr) 
-// S.C.: O(1) -> No extra space proportional to the size of input string "s" is getting used 
+// T.C. = O(n) + O(i) = O(n) 
+// -> (traversing the whole string) + (t.c. of func. substr) 
+
+// S.C. = O(1) 
+// -> No extra space proportional to the size of input string "s" is getting used 
 
 // Here, n = length of input string named "s", and i = length of substring 

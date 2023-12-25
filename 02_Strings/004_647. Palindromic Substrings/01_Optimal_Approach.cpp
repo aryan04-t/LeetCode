@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/palindromic-substrings/description/ 
 
 
-#include<iostream>
 #include<string>
 using namespace std;
 
@@ -57,8 +56,8 @@ public:
 };
 
 
-// T.C.: O(n * (n/2)) + O(n * (n/2)) = O(n^2) 
+// T.C. = O(n * (n/2)) + O(n * (n/2)) = O(n^2) 
 
-// S.C.: O(1) 
+// S.C. = O(1) 
 
 // Here, n = length of input string named 's' 

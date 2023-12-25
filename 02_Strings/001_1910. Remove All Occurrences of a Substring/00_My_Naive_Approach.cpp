@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/remove-all-occurrences-of-a-substring/ 
 
 
-#include<iostream>
 #include<string>
 using namespace std;
 
@@ -26,9 +25,9 @@ public:
 };
 
 
-// T.C.: O(n/m) * ( O(m) + O(m) + O(n) ) = O(2n) + O(n^2/m) + O(n/m) = O(n^2/m) 
+// T.C. = O(n/m) * ( O(m) + O(m) + O(n) ) = O(2n) + O(n^2/m) + O(n/m) = O(n^2/m) 
 // -> (worst case for loop iterations) * ( (substr t.c.) + (compare t.c.) + (erase t.c.) )
 
-// S.C.: O(1) 
+// S.C. = O(1) 
 
 // Here, n = length of input string named "s", and m = length of input string named "part" 

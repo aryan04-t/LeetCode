@@ -54,9 +54,9 @@ bool findRedundantBrackets(string &s){
 }
 
 
-// T.C.: ( O(n) * O(1) ) + O(n) = O(n) 
+// T.C. = ( O(n) * O(1) ) + O(n) = O(n) 
 // -> ( (t.c. of for loop which is iterating over whole input string once) * (average t.c. of nested while loop) ) + (worst case t.c. of outer while loop) 
 
-// S.C.: O(n) 
+// S.C. = O(n) 
 
 // Here, n = length of input string named "s" 

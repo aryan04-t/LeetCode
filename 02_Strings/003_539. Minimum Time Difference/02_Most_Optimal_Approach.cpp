@@ -9,7 +9,7 @@
 // --> A "space-time trade-off" is a way of solving a problem or calculation in less time by using more storage space, or by solving a problem in very little space by spending a long time.
 
 
-#include<iostream>
+
 #include<vector>
 #include<algorithm>
 #include<string>
@@ -54,9 +54,10 @@ public:
 };
 
 
-// T.C.: O(n) + O(n * log(n)) + O(n) = O(n * log(n)) 
+// T.C. = O(n) + O(n * log(n)) + O(n) = O(n * log(n)) 
 // -> (traversing whole input vector to convert string values into minutes [integer] and storing these integer values into a new vector) + (t.c. of STL's sort function for sorting integer values) + (traversing whole vector again to find the minimum time difference) 
 
-// S.C.: O(n) -> We're creating a integer vector of size "n", and that's why s.c. = O(n) because the size of new vector created is proportional to the size of input vector 
+// S.C. = O(n) 
+// -> We're creating a integer vector of size "n", and that's why s.c. = O(n) because the size of new vector created is proportional to the size of input vector 
 
 // Here, n = size of input vector named "timePoints" 

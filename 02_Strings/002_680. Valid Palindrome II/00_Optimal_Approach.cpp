@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/valid-palindrome-ii/ 
 
 
-#include<iostream>
 #include<string>
 using namespace std;
 
@@ -42,7 +41,7 @@ public:
 }; 
 
 
-// T.C.: O(n) 
-// S.C.: O(1) 
+// T.C. = O(n) 
+// S.C. = O(1) 
 
 // Here, n = length of input string named "s" 

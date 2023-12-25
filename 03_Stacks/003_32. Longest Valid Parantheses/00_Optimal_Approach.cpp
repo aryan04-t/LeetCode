@@ -40,7 +40,7 @@ public:
 };
 
 
-// T.C.: O(n) -> (Due to for loop which iterates over the whole input string once) 
-// S.C.: O(n/2) = O(n) -> (Due to space occupied by stack in worst case scenario) 
+// T.C. = O(n) -> (Due to for loop which iterates over the whole input string once) 
+// S.C. = O(n/2) = O(n) -> (Due to space occupied by stack in worst case scenario) 
 
 // Here, n = length of input string named "s"
