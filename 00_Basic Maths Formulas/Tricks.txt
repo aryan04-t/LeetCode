@@ -1,0 +1,10 @@
+* To find whether a number is odd or even, use bitwise AND (&), try to stay away from modulus it is a heavy operation 
+
+@ Example Code: 
+
+if(num & 1){
+    cout << "Number is Odd" << endl;
+}
+else{
+    cout << "Number is Even" << endl;
+}
