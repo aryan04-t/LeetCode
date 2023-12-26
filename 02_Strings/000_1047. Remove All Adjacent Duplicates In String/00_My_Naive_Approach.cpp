@@ -1,4 +1,4 @@
-// LeetCode (Remove All Adjacent Duplicates In String):
+// LeetCode (1047. Remove All Adjacent Duplicates In String):
 // https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/ 
 
 
