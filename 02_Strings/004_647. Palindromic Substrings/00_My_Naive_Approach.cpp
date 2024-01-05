@@ -1,5 +1,5 @@
 // LeetCode (647. Palindromic Substrings): 
-// https://leetcode.com/problems/palindromic-substrings/description/ 
+// https://leetcode.com/problems/palindromic-substrings/ 
 
 
 #include<string>
