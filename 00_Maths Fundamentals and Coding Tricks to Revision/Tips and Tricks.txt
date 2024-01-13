@@ -33,3 +33,11 @@ $ Use "delete" for freeing memory a dynamically allocated variable or object's m
 --> A "Stack" should not be empty before calling its "top()" member function. 
 --> A "Queue" should not be empty before calling its "front()" member function. 
 --> And a "Dequeue" should not be empty before calling its "front()" or "back()" member function. 
+
+
+// - - - - - - - - - - 
+
+
+@ Prerequisite for applying binary search is that the data set should be in sorted order. 
+
+
