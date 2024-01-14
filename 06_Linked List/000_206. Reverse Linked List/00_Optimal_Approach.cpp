@@ -1,3 +1,7 @@
+// LeetCode (206. Reverse Linked List): 
+// https://leetcode.com/problems/reverse-linked-list/ 
+
+
 struct ListNode {
     int val;
     ListNode *next;
@@ -47,4 +51,4 @@ public:
 // T.C. = O(n) 
 // S.C. = O(1) 
 
-// Here, n = total number of nodes present in the singly-linked list 
+// Here, n = total number of nodes which are present inside the singly-linked list 
