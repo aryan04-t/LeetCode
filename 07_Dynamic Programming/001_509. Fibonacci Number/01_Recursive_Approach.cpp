@@ -25,7 +25,7 @@ public:
 
 // S.C. = O(n) -> (This space complexity is caused due to the function call stack) 
 
-// Space complexity is O(n) because the depth of the recursion tree is proportional to the input "n". 
+// Space complexity is O(n) because the depth of the "recursion tree" / "function call stack" is proportional to the input "n". 
 
 
 // Here, n = the value of input variable named "n" 
