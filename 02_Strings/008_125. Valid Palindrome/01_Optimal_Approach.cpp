@@ -11,21 +11,21 @@ public:
 
     bool isAplhaNumeric(char c){
 
-        if(c >= 48 && c <= 57){
+        if(c >= '0' && c <= '9'){
             return true;
         }
-        if(c >= 65 && c <= 90){
+        if(c >= 'A' && c <= 'Z'){
             return true;
         }
-        if(c >= 97 && c <= 122){
+        if(c >= 'a' && c <= 'z'){
             return true;
         }
 
         return false;
     }
 
-    char toLower(char &c){ 
-        if((c >= 48 && c <= 57) || (c >= 97 && c <= 122)){
+    char toLower(char c){ 
+        if((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')){
             return c;
         }
         char ch = c - 'A' + 'a';

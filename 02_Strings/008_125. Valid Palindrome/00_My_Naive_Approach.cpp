@@ -11,7 +11,7 @@ public:
 
     char toLower(char &c){ 
         
-        if((c >= 48 && c <= 57) || (c >= 97 && c <= 122)){
+        if((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')){
             return c;
         }
         
@@ -26,13 +26,13 @@ public:
         int n = s.length();
 
         for(int i=0; i < n; i++){
-            if(s[i] >= 48 && s[i] <= 57){
+            if(s[i] >= '0' && s[i] <= '9'){
                 output.push_back(s[i]);
             }
-            if(s[i] >= 65 && s[i] <= 90){
+            if(s[i] >= 'A' && s[i] <= 'Z'){
                 output.push_back(s[i]);
             }
-            if(s[i] >= 97 && s[i] <= 122){
+            if(s[i] >= 'a' && s[i] <= 'z'){
                 output.push_back(s[i]);
             }
         }
