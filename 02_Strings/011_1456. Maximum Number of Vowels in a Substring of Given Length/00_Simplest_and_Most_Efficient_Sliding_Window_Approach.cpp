@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/ 
 
 
-#include<iostream> 
+#include<string> 
 #include<algorithm> 
 using namespace std;  
 
