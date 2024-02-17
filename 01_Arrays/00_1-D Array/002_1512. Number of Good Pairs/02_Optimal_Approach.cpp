@@ -11,21 +11,22 @@ class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
         
-        unordered_map<int,int> mp;
-        
-        int ans = 0;
-        
-        for(int i : nums){
-            ans += mp[i];
-            mp[i]++;
+        unordered_map<int, int> mp;
+
+        int count = 0;
+
+        for(auto val : nums){
+            count += mp[val];
+            mp[val]++;
         }
 
-        return ans;
+        return count; 
+
     }
 };
 
 
 // T.C. = O(n) 
-// S.C. = O(n) 
+// S.C. = O(m) 
 
-// Here, n = number of elements present inside the input vector named "nums" 
+// Here, n = total number of elements which are present inside the input vector named "nums", and m = total number of unique elements which are present inside the input vector named "nums" 
