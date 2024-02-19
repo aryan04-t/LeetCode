@@ -29,7 +29,7 @@ public:
 }; 
 
 
-// T.C. = O(13) * O(n) = O(n) 
+// T.C. = O(13) + O(n) = O(n) 
 // S.C. = O(13) + O(n) = O(n) 
 
 // Here, n = the total number of digits which are present inside the input number named "num" 
