@@ -34,7 +34,7 @@ public:
 };
 
 
-// T.C. = O(n) + O(n) = O(2n) = O(n) 
+// T.C. = O(k) + O(n-k) + O(n) = O(n) + O(n) = O(2n) = O(n) 
 // S.C. = O(n) 
 
-// Here, n = total number of elements which are present inside the input vector named "nums", and k = the value of input variable named "k" 
+// Here, n = total number of elements which are present inside the input vector named "nums", and k = the updated value of input variable named "k" after performing the "k modulo n" operation 
