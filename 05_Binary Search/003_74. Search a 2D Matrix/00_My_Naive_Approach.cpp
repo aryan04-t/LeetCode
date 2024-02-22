@@ -6,8 +6,9 @@
 using namespace std; 
 
 
-class Solution { 
+class Solution {
 public:
+
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         
         int n = matrix.size();
@@ -39,7 +40,9 @@ public:
                     }
 
                 }
-
+                
+                break;
+                
             }
             else{
                 continue;
