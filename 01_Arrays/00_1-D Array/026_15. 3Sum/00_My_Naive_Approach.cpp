@@ -48,6 +48,6 @@ public:
 // So, T.C. of above 3 nested loops = ((n-2) * (n-1) * (2n-3)) / 6 = O(n^3) 
 
 // Overall T.C. = O( n^3 * ( (3 * log(3)) + log(n) ) ) + O(n) = O(n^3 * log(n)) 
-// S.C. = O(n) + O(n) = O(2n) = O(n) 
+// S.C. = O(n) + O(log(3)) + O(n) = O(2n) = O(n) 
 
-// Here, n = total number of elements which are present inside the input vector named "nums" 
+// Above all logs have a base of 2, and n = total number of elements which are present inside the input vector named "nums" 
