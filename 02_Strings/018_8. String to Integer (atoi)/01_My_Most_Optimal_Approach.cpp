@@ -37,9 +37,7 @@ public:
         }
         
 
-        string number = s.substr(i, j-i);
-
-        int m = number.length();
+        int m = j-i;
         int num = 0; 
         
         if(m >= 11){ 
@@ -48,9 +46,9 @@ public:
         } 
         else if(m < 10){
             
-            int k = 0;
-            while(k < m){
-                num = num*10 + int(number[k] - '0');
+            int k = i;
+            while(k < j){
+                num = num*10 + int(s[k] - '0');
                 k++;
             }
         
@@ -62,18 +60,18 @@ public:
             
             if(isPositive){
 
-                int k = 0;
-                while(k < 9){
-                    num = num*10 + int(number[k] - '0');
+                int k = i;
+                while(k < j-1){
+                    num = num*10 + int(s[k] - '0');
                     k++;
                 }
 
                 if( num < INT_MAX/10){
-                    num = num*10 + int(number[k] - '0');
+                    num = num*10 + int(s[k] - '0');
                     return num;
                 }
-                else if( num == INT_MAX/10  && (number[k] - '0') <= 7 ){
-                    num = num*10 + int(number[k] - '0');
+                else if( num == INT_MAX/10  && (s[k] - '0') <= 7 ){
+                    num = num*10 + int(s[k] - '0');
                     return num;
                 }
                 else{
@@ -83,18 +81,18 @@ public:
             }
             else{
 
-                int k = 0; 
-                while(k < 9){
-                    num = num*10 - int(number[k] - '0');
+                int k = i; 
+                while(k < j-1){
+                    num = num*10 - int(s[k] - '0');
                     k++;
                 }
 
                 if( num > INT_MIN/10 ){
-                    num = num*10 - int(number[k] - '0');
+                    num = num*10 - int(s[k] - '0');
                     return num;
                 }
-                else if( num == INT_MIN/10  && (number[k] - '0') <= 8 ){
-                    num = num*10 - int(number[k] - '0');
+                else if( num == INT_MIN/10  && (s[k] - '0') <= 8 ){
+                    num = num*10 - int(s[k] - '0');
                     return num;
                 }
                 else{
@@ -111,7 +109,7 @@ public:
 };
 
 
-// T.C. = processing input string + t.c. of substr() function = O(n) + O(m) = O(n) 
-// S.C. = O(m) 
+// T.C. = O(n) 
+// S.C. = O(1) 
 
-// Here, n = the length of the input string named "s", and m = the length of the valid number sequence which has to be processed 
+// Here, n = the length of the input string named "s" 
