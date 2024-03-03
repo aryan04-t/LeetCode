@@ -11,7 +11,7 @@ using namespace std;
 class Solution {
 public:
 
-    bool isVowel(const  char &ch){
+    bool isVowel(const char &ch){
 
         if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
             return true; 
