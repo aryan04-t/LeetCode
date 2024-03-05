@@ -37,7 +37,7 @@ public:
 };
 
 
-// T.C. = O(n) + O(n) = O(2n) = O(n) 
+// T.C. = O(n) + O(n/2) = O(3n/2) = O(n) 
 // S.C. = O(n/2) = O(n) 
 
 // Here, n = total number of elements which are present inside the input vector named "nums" 
