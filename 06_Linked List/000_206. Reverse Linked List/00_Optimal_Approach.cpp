@@ -28,7 +28,7 @@ struct ListNode {
 
 class Solution {
 public:
-    
+
     ListNode* reverseList(ListNode* head) {
 
         ListNode* prevNode = nullptr;
@@ -36,13 +36,17 @@ public:
         ListNode* nextNode;
 
         while(currNode != nullptr){
+
             nextNode = currNode->next;
             currNode->next = prevNode;
-            prevNode = currNode;
+            
+            prevNode = currNode; 
             currNode = nextNode;
+
         }
 
         return prevNode;
+
     }
 
 };
@@ -51,4 +55,4 @@ public:
 // T.C. = O(n) 
 // S.C. = O(1) 
 
-// Here, n = total number of nodes which are present inside the singly-linked list 
+// Here, n = total number of nodes present in the given singly-linked list 
