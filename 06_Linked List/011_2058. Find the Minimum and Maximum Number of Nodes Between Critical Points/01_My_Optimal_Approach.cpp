@@ -29,7 +29,7 @@ struct ListNode {
         ListNode(int x) : val(x), next(nullptr) {}
         ListNode(int x, ListNode *next) : val(x), next(next) {}
     };
-*/ 
+*/
 
 
 class Solution {
@@ -49,16 +49,31 @@ public:
         ListNode* mid = head->next; 
         ListNode* end = head->next->next; 
 
-        vector<int> criticalPoints;
+        int firstPos = -1; 
+        int prevPos = -1; 
+        int currPos = -1; 
+
+        int mini = INT_MAX; 
+        int maxi = INT_MIN; 
 
         while(end != nullptr){
 
-            if( mid->val > start->val && mid->val > end->val ){
-                criticalPoints.push_back(nodeNum);
-            }
+            if( (mid->val > start->val && mid->val > end->val) || (mid->val < start->val && mid->val < end->val) ){
 
-            if( mid->val < start->val && mid->val < end->val ){
-                criticalPoints.push_back(nodeNum);
+                if(firstPos == -1){
+                    firstPos = nodeNum; 
+                } 
+
+                prevPos = currPos; 
+                currPos = nodeNum; 
+
+                if(prevPos != -1){
+                    int currDiff = currPos - prevPos;
+                    if(currDiff < mini){
+                        mini = min(mini, currDiff); 
+                    }
+                } 
+            
             }
 
             nodeNum++; 
@@ -68,21 +83,14 @@ public:
 
         }
 
-        int n = criticalPoints.size();
+        if(mini != INT_MAX){
 
-        if(n >= 2){
+            maxi = currPos - firstPos;
 
-            int mini = INT_MAX;
+            ans[0] = mini; 
+            ans[1] = maxi; 
 
-            for(int i=1; i < n; i++){
-                int currDiff = criticalPoints[i] - criticalPoints[i-1];
-                if(currDiff < mini){
-                    mini = min(mini, currDiff);
-                }
-            }
-
-            ans[0] = mini;
-            ans[1] = criticalPoints[n-1] - criticalPoints[0];
+            return ans;
 
         }
 
@@ -93,7 +101,7 @@ public:
 };
 
 
-// T.C. = O(n) + O(n-2) = O(2n - 2) = O(n) 
-// S.C. = O(n) 
+// T.C. = O(n) 
+// S.C. = O(1) 
 
-// Here, n = total number of nodes which are present inside the input list whose head is provided to us 
+// Here, n = total number of nodes whcih are present inside the input list whose head is provided to us 
