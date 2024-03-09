@@ -1,8 +1,7 @@
-// LeetCode (110. Balanced Binary Tree): 
-// leetcode.com/problems/balanced-binary-tree/ 
+// LeetCode (104. Maximum Depth of Binary Tree): 
+// https://leetcode.com/problems/maximum-depth-of-binary-tree/ 
 
 
-#include<cstdlib> 
 #include<algorithm> 
 using namespace std; 
 
@@ -30,37 +29,29 @@ struct TreeNode {
         TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
         TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
     };
-*/
+*/ 
 
 
 class Solution {
 public:
 
-    int helper(TreeNode* root, bool &ans){
-
+    int getHeight(TreeNode* root){
+        
         if(root == nullptr){
             return 0; 
         }
 
-        int leftHeight = helper(root->left, ans); 
-        int rightHeight = helper(root->right, ans); 
-
-        int diff = abs(leftHeight - rightHeight); 
-
-        if(diff != 1 && diff != 0){
-            ans = false; 
-        }
+        int leftHeight = getHeight(root->left); 
+        int rightHeight = getHeight(root->right); 
 
         return max(leftHeight, rightHeight) + 1; 
 
     }
 
-    bool isBalanced(TreeNode* root) {
-
-        bool ans = true; 
-        helper(root, ans); 
-
-        return ans; 
+    int maxDepth(TreeNode* root) {
+        
+        int depth = getHeight(root); 
+        return depth; 
 
     }
 
@@ -70,4 +61,4 @@ public:
 // T.C. = O(n) 
 // S.C. = O(h) 
 
-// Here, n = total number of nodes which are present inside the tree, and h = the height of tree 
+// Here, n = the total number of nodes which are present inside the given binary tree, and h = the height of the given binary tree 
