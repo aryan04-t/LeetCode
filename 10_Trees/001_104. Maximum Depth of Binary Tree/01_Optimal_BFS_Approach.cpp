@@ -1,5 +1,5 @@
-// LeetCode (1302. Deepest Leaves Sum): 
-// https://leetcode.com/problems/deepest-leaves-sum/ 
+// LeetCode (104. Maximum Depth of Binary Tree): 
+// https://leetcode.com/problems/maximum-depth-of-binary-tree/ 
 
 
 #include<queue> 
@@ -33,47 +33,42 @@ struct TreeNode {
 
 
 class Solution {
-public:
+public: 
 
-    int deepestLeavesSum(TreeNode* root) {
-              
-        queue<TreeNode*> q; 
-        q.push(root); 
+    int maxDepth(TreeNode* root) {
+        
+        if(root == nullptr) return 0;
 
-        int levelSize = q.size();
-        int sum = 0;
+        queue<TreeNode*> q;
+        q.push(root);
+
+        int depth = 0; 
+        int levelSize = 1; 
 
         while(!q.empty()){
 
+            depth++; 
             levelSize = q.size(); 
-            sum = 0;
 
             for(int i=0; i < levelSize; i++){
-
-                TreeNode* current = q.front(); 
+                
+                TreeNode* currNode = q.front(); 
                 q.pop(); 
-
-                sum += current->val; 
-
-                if(current->left != nullptr){
-                    q.push(current->left);
-                }
-
-                if(current->right != nullptr){
-                    q.push(current->right);
-                }
+            
+                if(currNode->left != nullptr) q.push(currNode->left); 
+                if(currNode->right != nullptr) q.push(currNode->right); 
 
             }
         }
 
-        return sum; 
+        return depth; 
 
     }
-
+    
 };
 
 
 // T.C. = O(n) 
 // S.C. = O(m) 
 
-// Here, n = the total number of nodes present inside the given tree, and m = the maximum number of nodes which are present at any level of the given binary tree 
+// Here, n = the total number of nodes which are present inside the given binary tree, and m = the maximum number of which are present at any level of the given binary tree 
