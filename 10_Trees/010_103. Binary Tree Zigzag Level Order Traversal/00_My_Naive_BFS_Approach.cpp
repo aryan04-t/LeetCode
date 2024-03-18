@@ -104,5 +104,5 @@ public:
 // T.C. = O(ne) + O(2*no) = O(n) 
 // S.C. = O(n) + O(m) + O(k) = (this s.c. is caused due to 2-D vector named "ans") + (this s.c. is caused due to the 2 queues that I used) + (this s.c. is caused by the stack) = O(n) 
 
-// Here, ne = the sum of all the nodes which are present at all even levels, and no = the sum of all the nodes which are present at all odd levels 
+// Here, ne = the total number of nodes which are present at all even levels, and no = the total number of nodes which are present at all odd levels 
 // n = the total number of nodes which are present in the given binary tree, m = the maximum number of nodes which are present at any level of the given binary tree, and k = the maximum number of nodes which are present at any odd level of the given binary tree, and here 1st level of the binary tree is referred as 0th level of the tree 
