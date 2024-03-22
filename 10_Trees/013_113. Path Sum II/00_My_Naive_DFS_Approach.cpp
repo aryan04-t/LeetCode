@@ -73,6 +73,6 @@ public:
 
 
 // T.C. = O(n) + O(m*h) = O(m*h) 
-// S.C. = O(h) 
+// S.C. = O(n) + O(h) + O(h) = O(n) 
 
 // Here, n = total number of nodes which are present in the given binary tree, m = total number of leaf nodes which are present in the given binary tree, and h = the height of the given binary tree 
