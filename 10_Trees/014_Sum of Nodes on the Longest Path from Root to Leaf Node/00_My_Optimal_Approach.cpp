@@ -1,4 +1,4 @@
-// LeetCode (Sum of Nodes on the Longest Path from Root to Leaf Node): 
+// GeeksForGeeks (Sum of Nodes on the Longest Path from Root to Leaf Node): 
 // https://www.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1 
 
 
