@@ -2,7 +2,8 @@
 // https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 
 
-#include<vector>
+#include<vector> 
+#include<unordered_map> 
 using namespace std; 
 
 
@@ -35,28 +36,27 @@ struct TreeNode {
 class Solution {
 public:
 
-    int findIndex(int target, const vector<int> &inorder){
+    void createMapping(unordered_map<int, int> &mp, const vector<int> &inorder){
 
         int n = inorder.size(); 
 
         for(int i=0; i < n; i++){
-            if(inorder[i] == target) return i; 
+            mp[inorder[i]] = i; 
         }
 
-        return -1;
     }
 
-    TreeNode* buildTreeUsingPreAndInOrder(vector<int> &preorder, int &i, vector<int> &inorder, int start, int end){
+    TreeNode* buildTreeUsingPreAndInOrder(vector<int> &preorder, int &i, vector<int> &inorder, int start, int end, unordered_map<int, int> &mp){
 
         if(start > end) return nullptr; 
 
-        int data = preorder[i++]; 
+        int data = preorder[i++];   
         TreeNode* root = new TreeNode(data); 
 
-        int index = findIndex(data, inorder); 
+        int index = mp[data]; 
 
-        root->left = buildTreeUsingPreAndInOrder(preorder, i, inorder, start, index - 1); 
-        root->right = buildTreeUsingPreAndInOrder(preorder, i, inorder, index + 1, end); 
+        root->left = buildTreeUsingPreAndInOrder(preorder, i, inorder, start, index - 1, mp); 
+        root->right = buildTreeUsingPreAndInOrder(preorder, i, inorder, index + 1, end, mp); 
 
         return root; 
     }
@@ -69,14 +69,17 @@ public:
         int start = 0; 
         int end = n-1; 
 
-        TreeNode* root = buildTreeUsingPreAndInOrder(preorder, i, inorder, start, end); 
+        unordered_map<int, int> mp; 
+        createMapping(mp, inorder); 
+
+        TreeNode* root = buildTreeUsingPreAndInOrder(preorder, i, inorder, start, end, mp); 
 
         return root; 
     }
 }; 
 
 
-// T.C. = O( n * ((n+1)/2) ) = O(n^2) 
-// S.C. = O(h) + O(n) = (the s.c. caused by the function call stack) + (the s.c. caused by the creation of all the nodes of the given binary tree) = O(n) 
+// T.C. = O(n) 
+// S.C. = O(n) + O(h) + O(n) = O(n) 
 
 // Here, n = the total number of node values which are present inside the given input vector named "inorder / preorder", and h = the height of the given binary tree 
