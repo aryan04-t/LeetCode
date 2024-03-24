@@ -82,4 +82,4 @@ public:
 // T.C. = O(n) 
 // S.C. = O(n) + O(h) + O(n) = O(n) 
 
-// Here, n = the total number of node values which are present inside the given input vector named "inorder / preorder", and h = the height of the given binary tree 
+// Here, n = the total number of node values which are present inside the given input vector named "inorder / preorder", and h = the height of the binary tree which is getting constructed 
