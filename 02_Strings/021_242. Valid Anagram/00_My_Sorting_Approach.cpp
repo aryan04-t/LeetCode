@@ -12,8 +12,8 @@ public:
 
     bool isAnagram(string s, string t) {
 
-        int n = s.size(); 
-        int m = t.size(); 
+        int n = s.length(); 
+        int m = t.length(); 
 
         if(n != m) return false; 
 
