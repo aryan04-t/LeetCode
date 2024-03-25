@@ -49,7 +49,7 @@ public:
 };
 
 
-// T.C = O(n) + O(m * n) = O(m * n) 
-// S.C. = O(m) 
+// T.C = O(n) + O(k * n) = O(k * n) 
+// S.C. = O(k) 
 
-// Here, n = the total number of strings which are present inside the input vector named "strs", and m = the length of the smallest string in the input vector "strs" 
+// Here, n = the total number of strings which are present inside the input vector named "strs", and k = the length of the smallest string which is present in the input vector "strs" 
