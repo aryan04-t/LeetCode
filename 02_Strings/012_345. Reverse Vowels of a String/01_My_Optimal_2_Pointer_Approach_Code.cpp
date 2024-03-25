@@ -27,42 +27,30 @@ public:
 
     string reverseVowels(string s) {
 
-        string ans = s; 
-        int n = s.length();
+        int n = s.length(); 
 
         int i = 0; 
         int j = n-1; 
 
         while(i < j){
-            
-            while( i < j && !isVowel(ans[i]) ){
-                i++;
-            }
+            while( i < j && !isVowel(s[i]) ) i++;
+            while( i < j && !isVowel(s[j]) ) j--;
 
-            while( i < j && !isVowel(ans[j]) ){
-                j--;
-            }
+            char temp = s[i];
+            s[i] = s[j];
+            s[j] = temp;
 
-            if( i < j && isVowel(ans[i]) && isVowel(ans[j]) ){
-                
-                char temp = ans[i];
-                ans[i] = ans[j];
-                ans[j] = temp;
-
-                i++;
-                j--;
-
-            }
-
+            i++;
+            j--;
         }
 
-        return ans;
+        return s;
 
     }
 };
 
 
 // T.C. = O(n) 
-// S.C. = O(n) 
+// S.C. = O(1) 
 
 // Here, n = the total length of input string named "s" 

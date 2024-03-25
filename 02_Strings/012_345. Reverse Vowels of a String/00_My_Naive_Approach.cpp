@@ -53,13 +53,11 @@ public:
             
         }
 
-        string ans = s; 
-
         for(const pair<char, int> &val : vowels){
-            ans[val.second] = val.first; 
+            s[val.second] = val.first; 
         }
 
-        return ans;
+        return s;
 
     }
 
@@ -67,6 +65,6 @@ public:
 
 
 // T.C. = O(n) + O(m/2) + O(m) = O(n) 
-// S.C. = O(m) + O(n) = O(n) 
+// S.C. = O(m) 
 
 // Here, n = the length of input string named "s", and m = the total number of vowels which are present inside the input string named "s" 
