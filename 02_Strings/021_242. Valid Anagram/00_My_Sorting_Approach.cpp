@@ -33,4 +33,4 @@ public:
 // T.C. = O(n * log(n)) 
 // S.C. = O(log(n)) 
 
-// Here, n = the length of the input string named "s" / "t" = m 
+// Here, n = the length of the input string named "s", and m = the length of input string named "t" 

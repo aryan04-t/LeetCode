@@ -3,7 +3,7 @@
 
 
 #include<string> 
-#include<unordered_map> 
+#include<vector> 
 using namespace std; 
 
 
@@ -17,18 +17,18 @@ public:
 
         if(n != m) return false; 
 
-        unordered_map<char, int> mp; 
+        vector<int> charFreq(26, 0); 
 
         for(int i=0; i < n; i++){
-            mp[s[i]]++;
+            charFreq[s[i] - 'a']++;
         }
 
         for(int i=0; i < m; i++){
-            mp[t[i]]--; 
+            charFreq[t[i] - 'a']--; 
         }
 
-        for(const pair<char, int> &p : mp){
-            if(p.second != 0) return false; 
+        for(int i=0; i < 26; i++){
+            if(charFreq[i] != 0) return false; 
         }
 
         return true; 
