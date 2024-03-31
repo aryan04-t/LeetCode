@@ -14,8 +14,6 @@ public:
         int n = haystack.length();
         int m = needle.length();
 
-        int ans = -1;
-
         for(int i=0; i < n - m + 1; i++){
             
             int j = i;
@@ -32,16 +30,11 @@ public:
             }
 
             if(needlePresent){
-                ans = i;
+                return i;
             }
-            
-            if(ans != -1){
-                break;
-            }
-
         }
 
-        return ans;
+        return -1;
 
     }
 };
