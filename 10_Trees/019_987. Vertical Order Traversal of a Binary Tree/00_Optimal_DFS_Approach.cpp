@@ -36,43 +36,47 @@ struct TreeNode {
 
 
 class Solution {
-public:
+public: 
 
-    void traverse(TreeNode* root, int level, int horizontalDist, map<int, multiset<pair<int, int>>> &container){
+    void findVerticalTraversal(TreeNode* root, int level, int horizontalDist, map<int, multiset<pair<int, int>>> &container){
 
         if(root == nullptr) return; 
 
-        container[horizontalDist].insert({level, root->val});
+        container[horizontalDist].insert({level, root->val}); 
 
-        traverse(root->left, level + 1, horizontalDist - 1, container);  
-        traverse(root->right, level + 1, horizontalDist + 1, container);  
+        findVerticalTraversal(root->left, level + 1, horizontalDist - 1, container);
+        findVerticalTraversal(root->right, level + 1, horizontalDist + 1, container);
 
     }
-
 
     vector<vector<int>> verticalTraversal(TreeNode* root) {
 
         int level = 0; 
         int horizontalDist = 0; 
-
+        
         map<int, multiset<pair<int, int>>> container; 
-
-        traverse(root, level, horizontalDist, container); 
+        findVerticalTraversal(root, level, horizontalDist, container); 
 
         vector<vector<int>> ans; 
         
-        for(const pair<int, multiset<pair<int, int>>> &p : container){ 
+        for(const pair<int, multiset<pair<int,int>>> &p1 : container){
             
-            vector<int> temp; 
+            vector<int> temp;
 
-            for(const pair<int, int> &setsPair : p.second){
-                temp.push_back(setsPair.second); 
+            for(const pair<int, int> &p2: p1.second){
+                temp.push_back(p2.second); 
             }
 
-            ans.push_back(temp);
+            ans.push_back(temp); 
         }
 
         return ans; 
-
     }
 };
+
+
+// T.C. = O(n) + O( n * (log(m) to the base 2) * (log(k) to the base 2)) = O(n * log(m) * log(k)) 
+// S.C. = O(h) + O(n) + O(n) = O(n) 
+
+// Here, n = the total number of nodes which are present inside the given binary tree, and h = the height of the given binary tree 
+// m = the total number of unique horizontal distances which are present in the given binary tree, and k = the maximum number of nodes which are present at any given horizontal distance in the given binary tree 
