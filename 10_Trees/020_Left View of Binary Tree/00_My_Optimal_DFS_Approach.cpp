@@ -40,25 +40,25 @@ struct Node{
 */
 
 
-void getLeftView(Node* root, int height, map<int, int> &mp){
+void getLeftView(Node* root, int level, map<int, int> &mp){
     
     if(root == nullptr) return; 
     
-    if(mp.find(height) == mp.end()){
-        mp[height] = root->data; 
+    if(mp.find(level) == mp.end()){
+        mp[level] = root->data; 
     }
     
-    getLeftView(root->left, height + 1, mp); 
-    getLeftView(root->right, height + 1, mp); 
+    getLeftView(root->left, level + 1, mp); 
+    getLeftView(root->right, level + 1, mp); 
     
 }
 
 vector<int> leftView(Node *root){
     
     map<int, int> mp; 
-    int height = 0;
+    int level = 0;
     
-    getLeftView(root, height, mp);
+    getLeftView(root, level, mp);
     
     vector<int> ans; 
     for(const pair<int, int> &p : mp){
