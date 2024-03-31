@@ -69,7 +69,8 @@ vector<int> leftView(Node *root){
 }
 
 
-// T.C. = O(n * (log(n) + log(n))) = O(n * log(n)) 
+// T.C. = O(n * (log(h) + log(h))) = O(n * log(h)) 
 // S.C. = O(h) + O(n) + O(n) = O(n) 
 
 // Here, n = the total number of nodes which are present inside the given binary tree, and h = the height of the given binary tree 
+// In worst case h == n, when the binary tree is a skewed binary tree 
