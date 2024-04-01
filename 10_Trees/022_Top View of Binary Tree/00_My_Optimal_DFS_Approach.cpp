@@ -71,7 +71,7 @@ public:
 };
 
 
-// T.C. = O(n * (log(m) + log(m))) + O(m) = O(n * log(m)) 
-// S.C. = O(h) + O(m) + O(m) = O(max(h, m)) 
+// T.C. = O(n * (log(hd) + log(hd))) + O(hd) = O(n * log(hd)) 
+// S.C. = O(h) + O(hd) + O(hd) = O(max(h, hd)) 
 
-// Here, n = the total number of nodes which are present inside the given binary tree, h = the hieght of the given binary tree, and m = the total number of unique horizontal distance values which are present inside the given binary tree  
+// Here, n = the total number of nodes which are present inside the given binary tree, h = the hieght of the given binary tree, and hd = the total number of unique horizontal distance values which are present inside the given binary tree  
