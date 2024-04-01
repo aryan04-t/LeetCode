@@ -75,4 +75,4 @@ vector<int> leftView(Node *root){
 // T.C. = O(n) 
 // S.C. = O(m) + O(n) = O(n) 
 
-// Here, n = the total number of nodes which are present inside the given binary tree, h = the height of the given binary tree, and m = the maximum number of nodes which are present at any level of the given binary tree 
+// Here, n = the total number of nodes which are present inside the given binary tree, and m = the maximum number of nodes which are present at any level of the given binary tree 

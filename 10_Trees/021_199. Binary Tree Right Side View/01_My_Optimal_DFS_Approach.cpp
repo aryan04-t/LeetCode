@@ -46,7 +46,6 @@ public:
         
     }
 
-
     void getRightView(TreeNode* root, int height, bool &done, vector<bool> &isPrinted, vector<int> &ans){
     
         if(root == nullptr) return; 
