@@ -12,8 +12,8 @@ class Solution {
 public:
     string minRemoveToMakeValid(string s) {
         
-        std::ios_base::sync_with_stdio(0);
-        cin.tie(0);
+        std::ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
         
         stack<int> st;
         int n = s.length(); 
