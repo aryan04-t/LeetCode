@@ -15,14 +15,13 @@ public:
         int m = matrix[0].size();
 
         int start = 0;
-        int end = (n*m) - 1;
-        int mid, row, col;
+        int end = (n*m) - 1; 
 
         while(start <= end){
 
-            mid = start + (end-start) / 2; 
-            row = mid / m; 
-            col = mid % m;
+            int mid = start + (end-start) / 2; 
+            int row = mid / m; 
+            int col = mid % m;
 
             if(matrix[row][col] == target){
                 return true;
@@ -36,8 +35,7 @@ public:
 
         }
 
-        return false;
-
+        return false; 
     }
 };
 

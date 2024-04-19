@@ -42,7 +42,7 @@ public:
                 }
                 
                 break;
-                
+
             }
             else{
                 continue;
@@ -56,7 +56,7 @@ public:
 };
 
 
-// T.C. = O(n) + O(log(m) to the base 2) = O(n) 
+// T.C. = O(n) + O(log(m) to the base 2) = O(max(n, (log(m) to the base 2)) 
 // S.C. = O(1) 
 
 // Here, n = total number of 1-D vectors which are present inside the 2-D input vector named "matrix", and m = total number of integers which are present inside one 1-D vector of "matrix" 
