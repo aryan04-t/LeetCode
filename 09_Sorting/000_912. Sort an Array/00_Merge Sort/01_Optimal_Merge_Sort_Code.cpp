@@ -11,68 +11,57 @@ public:
 
     void mergeArrays(vector<int> &v, int start, int end){
 
-        int mid  = start + (end - start)/2; 
+        int mid = start + (end - start)/2; 
 
-        int arr1_Len = mid - start + 1;
-        int arr2_Len = end - mid;
+        int n = mid - start + 1; 
+        int m = end - mid; 
 
-        vector<int> arr1; 
-        vector<int> arr2; 
-
-
-        for(int i = start; i <= mid; i++){
-            arr1.push_back(v[i]);
-        }
+        vector<int> v1; 
+        vector<int> v2;
         
-        for(int i = mid+1; i <= end; i++){
-            arr2.push_back(v[i]);
+        int i = start; 
+        while(i <  mid+1){
+            v1.push_back(v[i++]);
         }
 
+        int j = mid+1;
+        while(j <= end){
+            v2.push_back(v[j++]); 
+        }
 
-        int mainIndex = start; 
-        int i = 0;
-        int j = 0; 
-        
-        while(i < arr1_Len && j < arr2_Len){
-            if(arr1[i] < arr2[j]){
-                v[mainIndex++] = arr1[i++];
+        i = 0; 
+        j = 0; 
+        int k = start; 
+        while(i < n && j < m){
+            if(v1[i] <= v2[j]){
+                v[k++] = v1[i++];
             }
             else{
-                v[mainIndex++] = arr2[j++];
+                v[k++] = v2[j++]; 
             }
         }
 
-        if(i == arr1_Len){
-            while(j < arr2_Len){
-                v[mainIndex++] = arr2[j++];
-            }
-        }
-        
-        if(j == arr2_Len){
-            while(i < arr1_Len){
-                v[mainIndex++] = arr1[i++];
-            }
+        while(j < m){
+            v[k++] = v2[j++];
         }
 
+        while(i < n){
+            v[k++] = v1[i++];
+        }
     }
 
+    void mergeSortHelper(vector<int> &v, int start, int end){
 
-    void mergeSortMain(vector<int> &u, int start, int end){
-
-        if(start == end){
-            return;
-        }
+        if(start == end) return; 
 
         int mid = start + (end - start)/2; 
 
-        mergeSortMain(u, start, mid); 
+        mergeSortHelper(v, start, mid); 
+        mergeSortHelper(v, mid+1, end); 
 
-        mergeSortMain(u, mid+1, end); 
-
-        mergeArrays(u, start, end);
-
+        mergeArrays(v, start, end); 
+        
     }
-
 
     void mergeSort(vector<int> &v){
 
@@ -80,10 +69,9 @@ public:
         int start  = 0;
         int end = n-1;
 
-        mergeSortMain(v, start, end);
+        mergeSortHelper(v, start, end);
 
     }
-
 
     vector<int> sortArray(vector<int>& nums) {
         mergeSort(nums);   
