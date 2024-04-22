@@ -2,9 +2,6 @@
 // https://leetcode.com/problems/divide-two-integers/ 
 
 
-// This Approach Gives "Time Limit Exceeded Error" 
-
-
 #include<limits.h> 
 using namespace std; 
 
@@ -39,12 +36,24 @@ public:
             }
         }
 
-        long long ans = 0;
+        long long ans = -1;
+        
+        long long start = 1;
+        long long end = Dividend; 
 
-        while(Dividend >= Divisor){
-            Dividend -= Divisor; 
-            ans++; 
+        while(start <= end){
+            
+            long long mid = start + (end - start)/2; 
+
+            if(mid * Divisor == Dividend){
+                ans = mid;
+                break;
+            }
+            else if(mid * Divisor > Dividend) end = mid - 1;
+            else if(mid * Divisor < Dividend) start = mid + 1;  
         }
+
+        if(ans == -1) ans = end;
 
         if(isDividendNegative || isDivisorNegative){
             ans = -1 * ans; 
@@ -60,7 +69,7 @@ public:
 };
 
 
-// T.C. = O(n/m) 
+// T.C. = O(log(n)) 
 // S.C. = O(1) 
 
-// Here, n = the value of input variable named "dividend", and m = the value of input variable named "divisor" 
+// Here, n = the value of input variable named "dividend" 
