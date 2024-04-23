@@ -8,25 +8,16 @@ using namespace std;
 
 class Solution {
 public:
-
     int divide(int dividend, int divisor) {
+        
+        if(dividend == INT_MIN && divisor == -1){
+            return INT_MAX;
+        }
 
-        long long Dividend = dividend; 
-        long long Divisor = divisor; 
-
-        long long ans = Dividend/Divisor; 
-
-        if(ans > INT_MAX) ans = INT_MAX;
-        else if(ans < INT_MIN) ans = INT_MIN; 
-
-        int finalAns = int(ans); 
-
-        return finalAns; 
+        return dividend/divisor;
     }
 };
 
-
-// Illegal Approach for this Question 
 
 // T.C. = O(1) 
 // S.C. = O(1) 

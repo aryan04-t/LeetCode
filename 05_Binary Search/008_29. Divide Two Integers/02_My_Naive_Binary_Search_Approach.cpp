@@ -3,6 +3,7 @@
 
 
 #include<limits.h> 
+#include<cstdlib> 
 using namespace std; 
 
 
@@ -13,28 +14,10 @@ public:
 
         if(dividend == 0) return 0; 
 
-        bool isDividendNegative = false; 
-        bool isDivisorNegative = false; 
+        bool isPositive = ((dividend < 0) == (divisor < 0)); 
 
-        long long Dividend = dividend;
-        long long Divisor = divisor;
-
-        if(Dividend < 0){
-            if(Divisor < 0){
-                Dividend = -1 * Dividend; 
-                Divisor = -1 * Divisor; 
-            }
-            else{
-                Dividend = -1 * Dividend; 
-                isDividendNegative = true; 
-            }
-        }
-        else{
-            if(Divisor < 0){
-                Divisor = -1 * Divisor; 
-                isDivisorNegative = true; 
-            }
-        }
+        long long Dividend = labs((long long)dividend);
+        long long Divisor = labs((long long)divisor);
 
         long long ans = -1;
         
@@ -54,11 +37,8 @@ public:
         }
 
         if(ans == -1) ans = end;
-
-        if(isDividendNegative || isDivisorNegative){
-            ans = -1 * ans; 
-        }
-
+        if(!isPositive) ans = -1 * ans; 
+    
         if(ans > INT_MAX) ans = INT_MAX;
         else if(ans < INT_MIN) ans = INT_MIN; 
 
