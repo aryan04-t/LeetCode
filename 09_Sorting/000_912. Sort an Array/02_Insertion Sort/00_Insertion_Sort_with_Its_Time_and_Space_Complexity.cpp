@@ -9,7 +9,7 @@
 using namespace std; 
 
 
-// Optimized Bubble Sort 
+// Insertion Sort 
 
 class Solution {
 public:
@@ -18,15 +18,19 @@ public:
 
         int n = nums.size();
 
-        for(int i=0; i < n-1; i++){
-            bool done = true;
-            for(int j=0; j < n-i-1; j++){
-                if(nums[j] > nums[j+1]){
-                    swap(nums[j], nums[j+1]); 
-                    done = false;
+        for(int i=1; i < n; i++){
+            int val = nums[i]; 
+            int j = i-1;
+            while(j >= 0){
+                if(nums[j] > val){
+                    nums[j+1] = nums[j]; 
                 }
+                else{
+                    break; 
+                }
+                j--; 
             }
-            if(done) break;
+            nums[j+1] = val; 
         }
 
         return nums; 
@@ -38,7 +42,7 @@ public:
 
 # T.C. = O((n * (n-1))/2) = O(n^2) 
      Best Case    |    Average Case   |    Worst Case   | 
-        O(n)      |       O(n^2)      |      O(n^2)     | 
+      O(n)        |       O(n^2)      |      O(n^2)     | 
 
 # S.C. = O(1) 
      Best Case    |    Average Case   |    Worst Case   | 
