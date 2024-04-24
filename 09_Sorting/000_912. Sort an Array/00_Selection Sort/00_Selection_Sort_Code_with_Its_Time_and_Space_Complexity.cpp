@@ -1,0 +1,50 @@
+// LeetCode (912. Sort an Array): 
+// https://leetcode.com/problems/sort-an-array/ 
+
+
+// This code gives TLE (Time Limit Exceeded) Error 
+
+
+#include<vector> 
+using namespace std; 
+
+
+// Selection Sort 
+
+class Solution {
+public:
+
+    vector<int> sortArray(vector<int>& nums) {
+
+        int n = nums.size();
+
+        for(int i=0; i < n-1; i++){
+            int mini = nums[i]; 
+            int miniIndex = i; 
+            for(int j=i+1; j < n; j++){
+                if(nums[j] < mini){
+                    mini = nums[j]; 
+                    miniIndex = j; 
+                }
+            }
+            swap(nums[i], nums[miniIndex]);
+        }
+
+        return nums; 
+    }
+};
+
+
+/*
+
+# T.C. = O((n * (n-1))/2) = O(n^2) 
+     Best Case    |    Average Case   |    Worst Case   | 
+      O(n^2)      |       O(n^2)      |      O(n^2)     | 
+
+# S.C. = O(1) 
+     Best Case    |    Average Case   |    Worst Case   | 
+       O(1)       |       O(1)        |      O(1)       | 
+
+Here, n = the total number of elements which are present inside the input vector named "nums" 
+
+*/ 
