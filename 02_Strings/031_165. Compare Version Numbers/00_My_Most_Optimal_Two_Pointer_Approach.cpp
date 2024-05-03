@@ -29,11 +29,11 @@ public:
                 j++; 
             }
 
-            if(num1 < num2 && ans == 0){
+            if(num1 < num2){
                 ans = -1; 
                 break; 
             }
-            else if(num1 > num2 && ans == 0){
+            else if(num1 > num2){
                 ans = 1; 
                 break; 
             }
