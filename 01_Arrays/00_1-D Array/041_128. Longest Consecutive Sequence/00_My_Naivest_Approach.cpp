@@ -9,9 +9,9 @@ using namespace std;
 class Solution {
 public:
 
-    bool isPresent(vector<int> &nums, int a){
+    bool isPresent(vector<int> &nums, int target){
         for(int val : nums){
-            if(a == val) return true;
+            if(val == target) return true;
         }
         return false;
     }
