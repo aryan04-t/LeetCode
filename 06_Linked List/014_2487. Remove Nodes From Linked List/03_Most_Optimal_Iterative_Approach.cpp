@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/remove-nodes-from-linked-list/ 
 
 
-#include<vector> 
 #include<algorithm> 
 #include<limits.h> 
 using namespace std; 
@@ -29,57 +28,41 @@ struct ListNode {
         ListNode(int x) : val(x), next(nullptr) {}
         ListNode(int x, ListNode *next) : val(x), next(next) {}
     };
-*/ 
+*/
 
 
 class Solution {
 public:
 
-    int getLengthOfLL(ListNode* head){
-        int len = 0;
-        while(head != nullptr){
-            len++;
-            head = head->next;
+    ListNode* reverseLL(ListNode* head){
+
+        ListNode* prevNode = nullptr; 
+        ListNode* currNode = head; 
+        ListNode* nextNode; 
+
+        while(currNode != nullptr){
+            nextNode = currNode->next; 
+            currNode->next = prevNode; 
+            prevNode = currNode; 
+            currNode = nextNode; 
         }
-        return len;
+
+        return prevNode; 
     }
 
-    void buildVector(ListNode* head, vector<int> &maxFromRight, int &i, int &maxi){
-
-        if(head == nullptr) return; 
-
-        buildVector(head->next, maxFromRight, i, maxi); 
-
-        maxi = max(maxi, head->val); 
-        maxFromRight[i] = maxi;
-        i--;
-    }
-
-    void freeUpMemory(vector<ListNode*> &uselessNodes){
-        for(ListNode* node : uselessNodes){
-            node->next = nullptr; 
-            delete node; 
-        }
-    }
-    
     ListNode* removeNodes(ListNode* head) {
 
-        int n = getLengthOfLL(head); 
+        ListNode* temp = reverseLL(head); 
 
-        vector<int> maxFromRight(n, INT_MIN);
         int maxi = INT_MIN; 
-        int i = n - 1; 
-        buildVector(head, maxFromRight, i, maxi); 
-
-        vector<ListNode*> uselessNodes; 
-
         ListNode* newHead = nullptr; 
         ListNode* newTail = nullptr; 
-
-        i = 0; 
-        ListNode* temp = head; 
+        
         while(temp != nullptr){
-            if(temp->val >= maxFromRight[i]){
+
+            maxi = max(maxi, temp->val); 
+
+            if(temp->val >= maxi){
                 if(newHead == nullptr){
                     newHead = temp; 
                     newTail = temp; 
@@ -89,21 +72,19 @@ public:
                     newTail = newTail->next; 
                 }
             }
-            else{
-                uselessNodes.push_back(temp); 
-            }
-            i++;
+            
             temp = temp->next; 
         }
+        newTail->next = nullptr; 
 
-        freeUpMemory(uselessNodes); 
+        newHead = reverseLL(newHead); 
 
         return newHead; 
     }
 };
 
 
-// T.C. = O(n) + O(n) + O(n) + O(n) = O(4n) = O(n) 
-// S.C. = O(n) + O(n) = O(2n) = O(n) 
+// T.C. = O(n) + O(n) + O(n) = O(3n) = O(n) 
+// S.C. = O(1) 
 
 // Here, n = the total number of nodes which are present inside the given "singly linked list" 
