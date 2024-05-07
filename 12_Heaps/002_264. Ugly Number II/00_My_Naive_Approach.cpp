@@ -2,6 +2,9 @@
 // https://leetcode.com/problems/ugly-number-ii/ 
 
 
+// This naive approach of mine gives TLE Error 
+
+
 #include<vector> 
 using namespace std; 
 
