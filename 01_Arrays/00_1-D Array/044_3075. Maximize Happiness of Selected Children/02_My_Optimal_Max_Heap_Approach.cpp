@@ -3,7 +3,7 @@
 
 
 #include<vector> 
-#include<algorithm> 
+#include<queue> 
 using namespace std; 
 
 
@@ -11,31 +11,32 @@ class Solution {
 public:
 
     long long maximumHappinessSum(vector<int>& happiness, int k) {
-        
-        int n = happiness.size(); 
-        sort(happiness.begin(), happiness.end(), greater<int>()); 
 
-        long long maxHappiness = 0; 
-        int i = 0; 
+        int n = happiness.size(); 
+
+        priority_queue<int> maxHeap; 
+        for(int val : happiness) maxHeap.push(val); 
+
+        long long totalMaxHappiness = 0;
         int happinessLost = 0; 
 
         while(k--){
             
-            int currPersonHappiness = happiness[i] - happinessLost; 
+            int currPersonHappiness = maxHeap.top() - happinessLost; 
             
-            if(currPersonHappiness > 0) maxHappiness += currPersonHappiness; 
+            if(currPersonHappiness > 0) totalMaxHappiness += (long long)currPersonHappiness; 
             else break; 
-            
+
             happinessLost++; 
-            i++;
+            maxHeap.pop(); 
         }
 
-        return maxHappiness; 
+        return totalMaxHappiness; 
     }
 };
 
 
-// T.C. = O(n * log(n)) + O(k) = O(n * log(n)) 
-// S.C. = O(log(n)) 
+// T.C. = O(n * log(n)) + O(k * log(n)) = O(n * log(n)) 
+// S.C. = O(n) 
 
 // Here, n = the total number of elements which are present inside the input vector named "happiness" 

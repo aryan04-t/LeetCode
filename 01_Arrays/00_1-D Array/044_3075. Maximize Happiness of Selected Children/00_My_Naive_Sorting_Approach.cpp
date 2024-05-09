@@ -15,11 +15,11 @@ public:
         int n = happiness.size(); 
         sort(happiness.begin(), happiness.end(), greater<int>()); 
 
-        long long maxHappiness = 0; 
+        long long totalMaxHappiness = 0; 
         int i = 0; 
 
         while(k-- && happiness[i] != 0){
-            maxHappiness += (long long)happiness[i]; 
+            totalMaxHappiness += (long long)happiness[i]; 
             int j = i+1; 
             while(j < n){
                 if(happiness[j] != 0) happiness[j] -= 1; 
@@ -29,7 +29,7 @@ public:
             i++; 
         }
 
-        return maxHappiness; 
+        return totalMaxHappiness; 
     }
 };
 
