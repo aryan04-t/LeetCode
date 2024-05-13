@@ -29,46 +29,41 @@ struct ListNode {
 class Solution {
 public:
 
+    ListNode* reverseLL(ListNode* head){
+
+        ListNode* prevNode = nullptr; 
+        ListNode* currNode = head; 
+        ListNode* nextNode; 
+
+        while(currNode != nullptr){
+            nextNode = currNode->next; 
+            currNode->next = prevNode; 
+            prevNode = currNode; 
+            currNode = nextNode; 
+        }
+
+        return prevNode; 
+    }
+
     int getDecimalValue(ListNode* head) {
 
+        head = reverseLL(head); 
+        ListNode* temp = head; 
 
-        if(head->next == nullptr){
-            if(head->val){
-                return 1;
-            }
-            
-            return 0;
-        }
-
-
-        ListNode* temp = head->next;
-        int twos = 1;
-
+        int num = 0; 
+        int pow = 1; 
         while(temp != nullptr){
-            twos *= 2;
-            temp = temp->next;
+            num += pow * temp->val; 
+            pow *= 2; 
+            temp = temp->next; 
         }
 
-        
-        int num = 0;
-        temp = head;
-
-        while(temp != nullptr){
-            if(temp->val){
-                num = num + twos;
-            }
-            temp = temp->next;
-            twos /= 2;
-        }
-
-
-        return num;
-
+        return num; 
     }
 };
 
 
-// T.C. = O(n) + O(n) = O(n) 
+// T.C. = O(n) + O(n) = O(2n) = O(n) 
 // S.C. = O(1) 
 
-// Here, n = total number of nodes which are present inside the singly-linked list 
+// Here, n = the total number of nodes which are present inside the input "singly linked list" 
