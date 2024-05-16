@@ -21,7 +21,7 @@ public:
         vector<int> word1CharFreqHash(26, 0); 
         vector<int> word2CharFreqHash(26, 0); 
         for(int i=0; i < n; i++) word1CharFreqHash[word1[i] - 'a']++; 
-        for(int i=0; i < n; i++) word2CharFreqHash[word2[i] - 'a']++; 
+        for(int i=0; i < m; i++) word2CharFreqHash[word2[i] - 'a']++; 
 
         unordered_map<int, int> mp1;
         unordered_map<int, int> mp2;
@@ -45,7 +45,7 @@ public:
 };
 
 
-// T.C. = O(26) + O(26) + O(n) + O(m) + O(26) + O(26) + O(26) + O(26) = O(2n) + O(6 * 26) = O(n) -> -> (Because n always == m when the loops are running, because the base case would never let the input reach loops if n != m) 
+// T.C. = O(26) + O(26) + O(n) + O(m) + O(26) + O(26) + O(26) + O(26) = O(2n) + O(6 * 26) = O(n) -> (Because n always == m when the loops are running, because the base case would never let the input reach loops if n != m) 
 // S.C. = O(26) + O(26) + O(26) + O(26) = O(4 * 26) = O(1) 
 
 // Here, n = the length of input string named "word1", and m = the length of input string named "word2" 
