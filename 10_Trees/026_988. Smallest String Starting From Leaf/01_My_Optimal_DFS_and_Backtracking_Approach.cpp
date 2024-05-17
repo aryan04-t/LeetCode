@@ -69,9 +69,8 @@ public:
 };
 
 
-// T.C. = O(((n+1)/2) - 1) * O(1)) + O(((n+1)/2) * O(m/2 + m/2)) = O(n) + O(n*m) = O(n*h) 
+// T.C. = O(((n+1)/2) - 1) * O(1)) + O((n+1)/2 * ( (h/2) + (h) + (h/2) )) = O(n*h) 
 // S.C. = O(h) + O(h) + O(h) = (s.c. caused by the function call stack) + (s.c. caused by the "curr" string) + (s.c. caused by the "ans" string) = O(h) 
 
 // Here, n = the total number of nodes which are present inside the given binary tree, 
-// h = the height of the given binary tree, 
-// and m = to the average length of all the root to leaf node strings, and in worst case m == h 
+// and h = the height of the given binary tree 

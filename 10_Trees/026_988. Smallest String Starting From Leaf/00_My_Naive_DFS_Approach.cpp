@@ -67,9 +67,8 @@ public:
 };
 
 
-// T.C. = O(((n+1)/2) - 1) * O(1)) + O(((n+1)/2) * O(m/2)) = O(n) + O(n*m) = O(n*h) 
+// T.C. = O((n+1)/2 * ( (h-1) + (h/2) + (h) )) + O( ((n+1)/4 * (h-2)) + ... + (2 * 1) + (1 * 0) ) = O(n*h) 
 // S.C. = O((h * (h+1)) / 2) + O(h) = O(h^2) 
 
 // Here, n = the total number of nodes which are present inside the given binary tree, 
-// h = the height of the given binary tree, 
-// and m = to the average length of all the root to leaf node strings, and in worst case m == h 
+// and h = the height of the given binary tree 
