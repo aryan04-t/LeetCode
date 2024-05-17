@@ -31,19 +31,18 @@ struct TreeNode {
 class Solution {
 public:
 
-    void dfs(TreeNode* root, int num, int &sum){ 
+    void dfs(TreeNode* root, int &num, int &sum){ 
 
         if(root == nullptr) return; 
 
         num = num * 10 + root->val; 
 
-        if(root->left == nullptr && root->right == nullptr){
-            sum += num;
-            return;
-        }
+        if(root->left == nullptr && root->right == nullptr) sum += num; 
 
         dfs(root->left, num, sum); 
         dfs(root->right, num, sum); 
+
+        num /= 10;
     }
 
     int sumNumbers(TreeNode* root) {
