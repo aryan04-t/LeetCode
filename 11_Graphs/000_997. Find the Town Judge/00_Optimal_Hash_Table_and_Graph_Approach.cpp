@@ -10,30 +10,32 @@ class Solution {
 public:
 
     int findJudge(int n, vector<vector<int>>& trust) {
-        
-        vector<int> in(n+1);
-        vector<int> out(n+1); 
 
-        int m = trust.size();
+        vector<int> inDegree(n+1); 
+        vector<int> outDegree(n+1); 
 
-        for(int i=0; i < m; i++){
-            out[trust[i][0]]++;
-            in[trust[i][1]]++;
+        for(const vector<int> &v : trust){
+            int e1 = v[0]; 
+            int e2 = v[1]; 
+            outDegree[e1]++; 
+            inDegree[e2]++; 
         }
 
+        int townJudge = -1; 
         for(int i=1; i < n+1; i++){
-            if(out[i] == 0 && in[i] == n-1){
-                return i;
+            if(inDegree[i] == n-1 && outDegree[i] == 0){
+                townJudge = i;
+                break;
             }
         }
 
-        return -1;
-
+        return townJudge;
     }
 };
 
 
-// T.C. = O(max(n, m)) 
-// S.C. = O(n+1) + O(n+1) = O(n) 
+// T.C. = O(e) + O(v) = O(v + e) 
+// S.C. = O(v + 1) + O(v + 1) = O(2v + 2) = O(v) 
 
-// Here, n = the value of input variable "n", and m = the size of 2-D input vector "trust" 
+// Here, v = the total number of people in the town = n = the total number of vertices in the graph, 
+// and e = the total number of edges in the graph = the total number of 2 sized vectors which are present inside the input 2-D vector named "trust" 
