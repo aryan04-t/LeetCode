@@ -69,8 +69,8 @@ public:
 };
 
 
-// T.C. = O(n^2) 
+// T.C. = O(n*h) = O(n^2) 
 // S.C. = O(h) 
 
 // Here, n = the total number of nodes which are present inside the given binary tree, 
-// and h = the height of the given binary tree 
+// and h = the height of the given binary tree, in worst case when the binary tree is skewed, h == n
