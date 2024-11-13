@@ -6,6 +6,7 @@
 #include<vector> 
 using namespace std;  
 
+
 class Solution {
 public:
     vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
@@ -45,3 +46,11 @@ public:
         return ans;
     }
 };
+
+
+// T.C. = O(2*m*log(l)) + O(n*log(l)) + O(l) + O(n) = O(max(m*log(l), n*log(l))) 
+// S.C. = O(l) + O(n) = O(max(l,n)) 
+
+// Here, m = total number of 2-sized vectors which are present inside the 2-D input vector items, 
+// n = total number of elements which are present inside the input vector named queries, 
+// l = total number of unqiue prices which are present inside the items and queries vetors 
