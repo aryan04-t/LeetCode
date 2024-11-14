@@ -48,7 +48,7 @@ public:
 };
 
 
-// T.C. = O(2*m*log(l)) + O(n*log(l)) + O(l) + O(n) = O(max(m*log(l), n*log(l))) 
+// T.C. = O(2*m*log(l)) + O(n*log(l)) + O(l) + O(n) = O(max(m*log(l), n*log(l))) = O(max(m, n) * log(l)) 
 // S.C. = O(l) + O(n) = O(max(l,n)) 
 
 // Here, m = total number of 2-sized vectors which are present inside the 2-D input vector items, 
