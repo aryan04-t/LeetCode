@@ -2,6 +2,9 @@
 // https://leetcode.com/problems/count-the-number-of-fair-pairs 
 
 
+// This appraoch gives TLE (As Expected) 
+
+
 #include<vector> 
 using namespace std; 
 
@@ -11,7 +14,7 @@ public:
     long long countFairPairs(vector<int>& nums, int lower, int upper) {
         
         int n = nums.size(); 
-        int count = 0; 
+        long long count = 0; 
 
         for (int i=0; i < n-1; i++) {
             for (int j=i+1; j < n; j++) {
