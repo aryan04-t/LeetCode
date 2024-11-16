@@ -36,6 +36,6 @@ public:
 
 
 // T.C. = O((n-k+1)*(k-1)) = O(n*k - k^2 + k - n + k - 1) = O(n*k) 
-// S.C. = O(1) 
+// S.C. = O(n) 
 
 // Here, n = the total number of elements which were present inside input vector named "nums" and k = the value of input variable k 

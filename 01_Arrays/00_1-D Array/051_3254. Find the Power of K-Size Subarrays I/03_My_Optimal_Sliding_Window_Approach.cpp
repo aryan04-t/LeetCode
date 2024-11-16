@@ -77,6 +77,6 @@ public:
 
 
 // T.C. = O(2n) = O(n) 
-// S.C. = O(1) 
+// S.C. = O(n) 
 
 // Here, n = the total number of elements which were present inside input vector named "nums" and k = the value of input variable k 
