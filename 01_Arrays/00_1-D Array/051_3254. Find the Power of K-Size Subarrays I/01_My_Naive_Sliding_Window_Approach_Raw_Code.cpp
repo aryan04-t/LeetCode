@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i 
 
 
-// After getting the sliding window intuition I coded this approach in a raw manner first, so this code breaks DRY (Don't repeat yourself) principle of coding. There are few places where it can be optimized from DRY principle's perspectve, but this raw intuition code is easy to understand from my naive coder's perspective 
+// After getting the sliding window intuition I coded this naive sliding window approach in a raw manner first, so this code breaks DRY (Don't repeat yourself) principle of coding. There are few places where it can be optimized from DRY principle's perspectve, but this raw intuition code is easy to understand from my naive coder's perspective 
 
 
 #include<vector> 
@@ -61,3 +61,9 @@ public:
         return result; 
     }
 };
+
+
+// T.C. = O((k-1) + (n-k)*(k-1)) = O((n-k+1)*(k-1)) = O(n*k) 
+// S.C. = O(1) 
+
+// Here, n = the total number of elements which were present inside input vector named "nums" and k = the value of input variable k 
