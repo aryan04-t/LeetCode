@@ -2,6 +2,9 @@
 // https://leetcode.com/problems/count-unguarded-cells-in-the-grid 
 
 
+// This is raw code, because it violates DRY (Don't Repeat Yourself) principle of coding 
+
+
 #include<vector> 
 using namespace std; 
 
