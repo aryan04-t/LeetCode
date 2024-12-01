@@ -63,15 +63,15 @@ public:
             }
         }
 
-        int ungaurdedCells = 0; 
+        int unguardedCells = 0; 
 
         for (int i=0; i < m; i++) {
             for (int j=0; j < n; j++) {
-                if (cells[i][j] == 0) ungaurdedCells++; 
+                if (cells[i][j] == 0) unguardedCells++; 
             }
         }
 
-        return ungaurdedCells; 
+        return unguardedCells; 
     }
 };
 
