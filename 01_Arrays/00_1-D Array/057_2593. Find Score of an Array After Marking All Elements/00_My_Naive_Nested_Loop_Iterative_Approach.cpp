@@ -2,6 +2,10 @@
 // https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements 
 
 
+// Obviously O(n^2) solution cannot pass a medium question of LeetCode with constraints define nums[i] having max value as 10^6 
+// [This approach of mine gives TLE] 
+
+
 #include<vector> 
 using namespace std; 
 
