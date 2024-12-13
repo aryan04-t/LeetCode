@@ -3,12 +3,12 @@
 
 
 #include<vector> 
-#include<algorithm>
 using namespace std; 
 
 
 class Solution {
 public:
+
     long long findScore(vector<int>& nums) {
         
         long long score = 0; 
@@ -35,4 +35,10 @@ public:
 
         return score; 
     }
-};
+}; 
+
+
+// T.C. = O((n/2) * n) = O(n^2) 
+// S.C. = O(n) 
+
+// Here, n = the length of 1-D input vector named "nums" 
