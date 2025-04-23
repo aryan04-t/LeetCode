@@ -37,7 +37,7 @@ public:
             
             int j1 = 0; 
             while (p1.second > 0 && j1 != repeatLimit) {
-                repeatLimitedString += char(p1.first + 'a'); 
+                repeatLimitedString += char(p1.first + 'a'); g
                 p1.second--; 
                 j1++; 
             }
