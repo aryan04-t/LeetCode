@@ -2,6 +2,9 @@
 // https://leetcode.com/problems/number-of-equivalent-domino-pairs 
 
 
+// Gives TLE Error 
+
+
 #include<vector>
 using namespace std;
 
@@ -32,7 +35,7 @@ public:
 };
 
 
-// T.C. = (n*(n-1))/2 = O(n^2) 
+// T.C. = O((n*(n-1))/2) = O(n^2) 
 // S.C. = O(1) 
 
 // Here, n = the length of input vector "dominoes" 
