@@ -2,9 +2,6 @@
 // https://leetcode.com/problems/maximum-total-subarray-value-i 
 
 
-// This solution has the best time and space complexity but in runtime the memory consumed in MBs is a lot as I am storing the mini and maxi in new variable, I can store the index at which they are present in "nums" vector and the solution will be better even in runtime memory consumption
-
-
 #include<vector>
 #include<climits>
 using namespace std;
