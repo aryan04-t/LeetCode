@@ -8,3 +8,5 @@
 3. Total number of pairs that can be formed between n items = ((n-1) * n)/2 
 --> This is formula is also obviously derived from 1st formula  
 
+
+4. Sum of any 2 sides of a triangle is always greater than the 3rd side (a + b > c -> then only it could be a triangle) 
