@@ -18,9 +18,9 @@ public:
         vector<int> p2,
         vector<int> p3
     ) {
-        int x1 = p1[0], y1 =p1[1];
-        int x2 = p2[0], y2 =p2[1];
-        int x3 = p3[0], y3 =p3[1];
+        int x1 = p1[0], y1 = p1[1];
+        int x2 = p2[0], y2 = p2[1];
+        int x3 = p3[0], y3 = p3[1];
 
         // You can also use hypot() function also instead of using pow() and sqrt() individually for side length calculation using coordinates 
         // Ex: double sideA = hypot(x2 - x1, y2 - y1); 
