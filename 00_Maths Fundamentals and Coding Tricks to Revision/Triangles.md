@@ -31,7 +31,7 @@ _ _ _ _ _ _ _ _
 ### Heron's Formula (Use when side lengths are known): 
 
 - Semi Parameter (S) = (a + b + c) / 2  
-- Triangle's Area = sqrt(s*(s-a)*(s-b)*(s-c))  
+- Triangle's Area = sqrt(s*(s-a)\*(s-b)\*(s-c))  
 
 
 ### Shoelace Formula (Use when only vertice coordinates are known): 
