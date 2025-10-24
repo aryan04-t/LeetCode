@@ -20,7 +20,6 @@ public:
             unordered_set<int> st;
             int odd = 0;
             int even = 0;
-            int subArrLen = 0;
 
             for (int j=i; j < n; j++) {
                 
@@ -31,9 +30,9 @@ public:
                     else even++;
                     st.insert(val);
                 }
-                subArrLen++;
 
                 if (even == odd) {
+                    int subArrLen = j - i + 1;
                     maxSubArrLen = max(subArrLen, maxSubArrLen);
                 }
             }
