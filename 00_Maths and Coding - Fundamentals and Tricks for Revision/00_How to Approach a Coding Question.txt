@@ -1,0 +1,10 @@
+# How to Approach a Coding Problem: 
+
+1. Read question, figure out the nature of question and figure out the data structure and concepts which will be used to solve it 
+2. Read constraints 
+3. Check Base Cases 
+4. Now Start from most fundamental test case, and build 3-4 different variety of test cases which take all the edge cases and general cases in account 
+5. Now spot the pattern and the algorithm which will be used 
+6. Build the logic and generalize the approach 
+7. Code your solution (Typing your code should be the least effort work in this whole process, "Build Logics and Recognise Patterns") 
+8. Dry Run the Code, and Debug it. 

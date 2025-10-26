@@ -1,0 +1,134 @@
+$ Tail Recursion: 
+
+--> A recursive function is said to be tail recursive when if the recursive call is the last thing done by the function. 
+
+--> Here, there is no need to keep track of the previous state. 
+
+_ _ _ _ _ _ _ _ _ _ 
+
+
+@ Example code: 
+
+
+#include<iostream>
+using namespace std;
+
+
+void f(int n){
+
+    if(n == 0){
+        return;
+    }
+    cout << n << " ";
+    f(n-1);
+}
+
+int main(){
+    
+    f(5);
+    
+    return 0;
+}
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+$ Head Recursion / Non-Tail Recursion: 
+
+
+--> A recursive function is said to be non-tail recursive if the recursive call is not the last thing done by the function. 
+
+--> After returning back, there is something left to evaluate. 
+
+_ _ _ _ _ _ _ _ _ _ 
+
+
+@ Example code-1: 
+
+
+#include<iostream>
+using namespace std;
+
+void f(int n){
+
+    if(n == 0){
+        return;
+    }
+    f(n-1);
+    cout << n << " ";
+}
+
+int main(){
+    
+    f(5);
+    
+    return 0;
+}
+
+_ _ _ _ _ _ _ _ _ _ 
+
+
+@ One more example code, which many people might think is a tail recursion, but it is not tail recursion, it is non-tail recursion: 
+
+
+#include<iostream>
+using namespace std;
+
+int fib(int n){
+
+    if(n == 0 || n == 1) return n;
+     
+    return fib(n-1) + fib(n-2);
+}
+
+int main(){
+    
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    cout << "nth term of fibonacci sequence is: " << fib(n);
+    
+    return 0;
+}
+
+
+// Here, recursive call is not the last thing done by the function, addition operator execution is the last thing done by the function, that's why this is non-tail recursion. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# Which one is better among "head" and "tail recursion, and why? 
+
+
+1. Tail recursion is usually considered more efficient than head recursion.
+
+2. Some programming languages, like Scheme and functional languages, optimize tail recursion by reusing the current function's stack frame for the next recursive call, effectively turning it into an iterative process. 
+
+3. Not all programming languages automatically optimize tail recursion though. 
+
+4. But this compiler optimization of tail recursion avoids stack overflow errors for deep recursive calls. 
+
+5. Head recursion on the other hand can lead to a large number of nested function calls, consuming more memory and potentially causing a stack overflow.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# References Cited: 
+
+
+* Neso Academy (Types of Recursion (Part 2) | Tail & Non-tail Recursion): 
+https://www.youtube.com/watch?v=HIt_GPuD7wk&list=WL&index=1&t=42s 
+
+
+* ChatGPT: 
+https://chat.openai.com 
+
+
+
+

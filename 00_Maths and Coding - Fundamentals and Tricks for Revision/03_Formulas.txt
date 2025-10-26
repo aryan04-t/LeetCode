@@ -1,0 +1,10 @@
+1. Sum of all natural numbers from 1 to n = (n * (n+1))/2 
+
+
+2. Sum of all natural numbers from 1 to n-1 = ((n-1) * n)/2 
+--> This formula is derived from above one  
+
+
+3. Total number of pairs that can be formed between n items = ((n-1) * n)/2 
+--> This is formula is also obviously derived from 1st formula  
+
