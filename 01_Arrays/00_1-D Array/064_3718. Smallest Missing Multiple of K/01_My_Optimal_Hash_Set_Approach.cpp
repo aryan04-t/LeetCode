@@ -13,21 +13,17 @@ public:
 
         unordered_set<int> st;
         for (int val : nums) st.insert(val);
-
-        bool ansFound = false;
-        int temp = 1;
-        int missingNum = k;
         
-        while (!ansFound) {
-            missingNum = k * temp;
-            if (st.find(missingNum) == st.end()) {
-                ansFound = true;
-                break;
-            }
-            temp++;
-        }
+        // unordered_set<int> st(nums.begin(), nums.end());
+        
+        int missingMultiple = k;
 
-        return missingNum;
+        while (true) {
+            if (st.find(missingMultiple) == st.end()) {
+                return missingMultiple;
+            }
+            missingMultiple += k;
+        }
     }
 };
 
