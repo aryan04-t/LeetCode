@@ -45,12 +45,6 @@ _ _ _ _ _ _ _ _ _ _
        1     =     0001 
        2     =     0010 
 
-
---> 
-
---> 
-
-
 _ _ _ _ _ _ _ _ _ _ 
 
 
@@ -62,11 +56,29 @@ _ _ _ _ _ _ _ _ _ _
 * Multiply number by 2 using left shift operator  
 
 
-
-
-
-
+_ _ _ _ _ _ _ _ _ _
 
 
 # How negative numbers are represented in binary 
 
+
+_ _ _ _ _ _ _ _ _ _
+
+
+
+# Bit Manipulation Catches: 
+
+
+1. OR Operator Catches: 
+--> If you're ORing n numbers, then in the result variable if a bit got set to 1, then that bit can never be retrieved back to 0 by ORing more numbers with the result variable 
+
+
+2. AND Operator Catches: 
+--> If you're ANDing n numbers, then in the result variable if a bit got set to 0, then that bit can never be retrieved back to 1 by ANDing more numbers with the result variable 
+
+
+3. XOR Operator Catches: 
+--> If you XOR a number with 0, then the number still stays the same, Ex: x ^ 0 = x; 
+--> If you XOR a number with itself, then the result is always 0, Ex: x ^ x = 0; 
+
+_ _ _ _ _ _ _ _ _ _ 
