@@ -10,13 +10,17 @@ using namespace std;
 class Solution {
 public:
     long long maxTotalValue(vector<int>& nums, int k) {
-        long long mini = INT_MAX;
-        long long maxi = INT_MIN;
+
+        long long mini = LLONG_MAX;
+        long long maxi = LLONG_MIN;
+        
         for (int num : nums) {
             if (num > maxi) maxi = num;
             if (num < mini) mini = num;
         }
-        long long res = (maxi - mini) * k;
+
+        long long res = (long long)(maxi - mini) * (long long)(k);
+        
         return res;
     }
 };
