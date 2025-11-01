@@ -95,13 +95,6 @@ Gain proficiency in advanced data structures:
 - Min-heap, max-heap, and heap operations.
 - Applications: Heap sort, Priority queues, Median of a stream.
 
-### Segment Tree
-- Construction, range queries, lazy propagation.
-- Applications: Range minimum query, range sum query.
-
-### Fenwick Tree (BIT)
-- Use-cases: Prefix sums, point updates.
-
 ### Graphs
 - Representations: Adjacency matrix, adjacency list.
 - Traversals: BFS, DFS.
@@ -114,6 +107,14 @@ Gain proficiency in advanced data structures:
 ### Disjoint Set Union (Union-Find)
 - Union by rank, path compression.
 - Applications: Kruskal’s algorithm, cycle detection.
+
+### Segment Tree
+- Construction, range queries, lazy propagation.
+- Applications: Range minimum query, range sum query.
+
+### Fenwick Tree (BIT)
+- Use-cases: Prefix sums, point updates.
+
 
 ---
 
