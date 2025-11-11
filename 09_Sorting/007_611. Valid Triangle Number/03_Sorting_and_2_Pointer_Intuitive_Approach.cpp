@@ -53,10 +53,10 @@ public:
     with binary search (similar to 3Sum logic). Good progress, but we can 
     do better.
 
-    - KEY INSIGHT: The condition (a + b > c) hints at using 2Sum logic!
+    - KEY INSIGHT: The condition (a + b > c) hints at using "LeetCode - 167. Two Sum II - Input Array Is Sorted" logic!
       * The L.H.S has (a + b) -> sum of two variables
       * The array is already sorted
-      * We can apply 2Sum's two-pointer approach to find a and b in O(n)
+      * We can apply "167. Two Sum II - Input Array Is Sorted" two-pointer approach to find a and b in O(n)
 
     - CHALLENGE: We also need to find c while maintaining (a < b < c)
       * Since the array is sorted in non-decreasing order, larger values 
@@ -66,7 +66,7 @@ public:
     - FINAL STRATEGY:
       * Fix c by iterating from the rightmost side
       * For each fixed c, use the remaining left side as search space
-      * Apply 2Sum's two-pointer approach to find all valid (a, b) pairs 
+      * Apply "167. Two Sum II - Input Array Is Sorted" two-pointer approach to find all valid (a, b) pairs 
             where a + b > c
       * This achieves O(n²) complexity -> better than O(n²·log(n))
 */
