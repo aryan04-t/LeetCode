@@ -27,7 +27,7 @@ public:
                 int upperBound = nums[i] + nums[j] - 1;
 
                 vector<int>::iterator it = upper_bound(
-                    nums.begin(),
+                    nums.begin() + j + 1,
                     nums.end(),
                     upperBound
                 );
