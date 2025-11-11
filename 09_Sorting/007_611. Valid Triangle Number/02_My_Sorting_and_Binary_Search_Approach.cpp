@@ -43,7 +43,7 @@ public:
                 if (nums[j] == 0) continue;
                 
                 int upperBound = nums[i] + nums[j] - 1;
-                int upperBoundIdx = upperBoundBinarySearch(nums, 0, n-1, upperBound);
+                int upperBoundIdx = upperBoundBinarySearch(nums, j+1, n-1, upperBound);
 
                 int validTriangles = upperBoundIdx - j - 1;
 
