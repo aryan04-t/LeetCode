@@ -19,7 +19,7 @@ public:
 
         while (start <= end) {
             int mid = start + (end - start)/2;
-            if (target == numbers[mid]) return mid;
+            if (target == numbers[mid]) end = mid - 1;
             else if (target < numbers[mid]) end = mid - 1;
             else if (target > numbers[mid]) start = mid + 1;
         }
