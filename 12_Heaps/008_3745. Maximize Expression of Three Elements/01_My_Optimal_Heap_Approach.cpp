@@ -47,6 +47,9 @@ public:
 };
 
 
+// Intuition: Find k max/min elements in the array - heap pattern 
+
+
 // T.C. = O(n * (log(2) to the base 2)) = O(n) 
 // S.C. = O(1)  
 
