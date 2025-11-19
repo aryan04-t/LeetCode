@@ -29,7 +29,7 @@ public:
 };
 
 
-// T.C. = O((n * (n+1))/2) = O(n^2) 
+// T.C. = O(n^2) 
 // S.C. = O(1) 
 
 // Here, n = the total number of elements which are present inside the input vector named "nums" 
