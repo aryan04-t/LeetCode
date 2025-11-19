@@ -41,3 +41,4 @@ $ Use "delete" for freeing memory a dynamically allocated variable or object's m
 @ Prerequisite for applying binary search is that the data set should be in sorted order. 
 
 
+@ If you're only allowed to use max_heap but you want to use min_heap then you can even make the max_heap into min_heap by just mutiplying the numbers with -1 before inserting and after retrieval also multiply the number -1 to recover the original number value 
