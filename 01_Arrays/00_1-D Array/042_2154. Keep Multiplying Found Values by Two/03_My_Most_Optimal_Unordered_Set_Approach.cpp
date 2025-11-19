@@ -9,17 +9,16 @@ using namespace std;
 
 class Solution {
 public:
-
     int findFinalValue(vector<int>& nums, int original) {
-
-        unordered_set<int> s;
-        for(int val : nums) s.insert(val); 
-
-        while(s.find(original) != s.end()){
-            original *= 2; 
+        
+        unordered_set<int> st(nums.begin(), nums.end());
+        
+        for (int val : nums) {
+            if (st.count(original)) original *= 2;
+            else break;
         }
 
-        return original; 
+        return original;
     }
 };
 
@@ -27,4 +26,4 @@ public:
 // T.C. = O(n) + O(n) = O(2n) = O(n) 
 // S.C. = O(n) 
 
-// Here, n = the total number of elements which are present inside the input vector named "nums" 
+// Here, n = the length of input vector named "nums" 
