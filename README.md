@@ -26,6 +26,6 @@ For my ongoing LeetCode practice, I've created a new repository: **[LeetCode Spr
 
 ---
 
-* This repo will remain as a structured, high-quality archive of my earlier problem-solving journey — something I can revisit for revision and reference.
+> This repo will remain as a structured, high-quality archive of my earlier problem-solving journey — something I can revisit for revision and reference.
 
 **Note:** This is an archive, not an abandonment. I will keep adding quality documentation when I feel its important and if I get time. 
