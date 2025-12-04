@@ -24,11 +24,7 @@ public:
             if(currWater > maxWater) maxWater = currWater; 
             
             if(height[start] < height[end]) start++; 
-            else if(height[start] > height[end]) end--; 
-            else{
-                start++; 
-                end--; 
-            }
+            else end--; 
         }
 
         return maxWater; 
