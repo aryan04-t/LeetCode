@@ -22,7 +22,7 @@
 
 **Balance DRY with clarity.** Follow Don't Repeat Yourself, but avoid over-coupling. Sometimes strategic duplication improves readability. Structure based on actual requirements, not rigid rules.
 
-## KISS Principle
+## 🧩 KISS Principle
 
 **Keep It Simple, Stupid.** Write straightforward code that solves the problem without unnecessary complexity. Simple solutions are easier to understand, debug, and maintain. When in doubt, choose clarity over cleverness.
 
