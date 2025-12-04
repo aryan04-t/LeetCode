@@ -47,3 +47,13 @@ When encountering division-related questions, consider which aspect the problem 
 - **Quotient analysis**: Examine how many complete groups fit
 - **Decimal places**: Track recursive remainder processing and termination
 - **Division formula**: Apply `dividend = divisor × quotient + remainder` for algebraic solutions
+
+- - - 
+
+## Reference Questions with Divison Intuitions Requirement:
+
+3381. Maximum Subarray Sum With Length Divisible by K - [Link](https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k)
+
+166. Fraction to Recurring Decimal - [Link](https://leetcode.com/problems/fraction-to-recurring-decimal)
+
+1590. Make Sum Divisible by P - [Link](https://leetcode.com/problems/make-sum-divisible-by-p)

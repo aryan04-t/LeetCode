@@ -67,3 +67,14 @@ count[num % k]++;
 ```
 
 **When to use array over hash map:** If k ≤ 10^5, array indexing is faster and more memory-efficient than hash map operations.
+
+
+## Reference Questions with Modular Arithmetic Intuitions Requirement:
+
+3381. Maximum Subarray Sum With Length Divisible by K - [Link](https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k)
+
+166. Fraction to Recurring Decimal - [Link](https://leetcode.com/problems/fraction-to-recurring-decimal)
+
+1590. Make Sum Divisible by P - [Link](https://leetcode.com/problems/make-sum-divisible-by-p)
+
+974. Subarray Sums Divisible by K - [Link](https://leetcode.com/problems/subarray-sums-divisible-by-k)
